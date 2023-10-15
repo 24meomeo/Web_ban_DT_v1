@@ -53,12 +53,12 @@ namespace DoAnQuanLyTapHoa.Models
         // Hàm tính thành tiền cho các sản phẩm trong giỏ hàng
         public decimal Total_money()
         {
-            var total = items.Sum(s => s._shopping_quantity * s._shopping_product.GiaSP);
+            var total = items.Sum(s => s._shopping_quantity * s._shopping_product.GiaSp);
             return (decimal)total;
         }
 
         // Phương thức cập nhật số lượng khi SP mua thêm
-        public void Update_quantity(string id, int _new_quan)
+        public void Update_quantity(int id, int _new_quan)
         {
             var item = items.Find(s => s._shopping_product.MaSP == id);
             if (item != null)
@@ -70,7 +70,7 @@ namespace DoAnQuanLyTapHoa.Models
         }
 
         // Phương thức xóa sản phẩm trong giỏ hàng
-        public void Remove_CartItem(String id)
+        public void Remove_CartItem(int id)
         {
             items.RemoveAll(s => s._shopping_product.MaSP == id);
         }

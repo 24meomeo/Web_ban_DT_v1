@@ -12,26 +12,18 @@ namespace DoAnQuanLyTapHoa.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class DonHang
+    public partial class PhanLoai
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public DonHang()
+        public PhanLoai()
         {
-            this.ChiTietDHs = new HashSet<ChiTietDH>();
+            this.SanPhams = new HashSet<SanPham>();
         }
     
-        public int MaDH { get; set; }
-        public System.DateTime NgayDH { get; set; }
-        public string NguoiNhan { get; set; }
-        public string DiaChiNhan { get; set; }
-        public string HTthanhtoan { get; set; }
-        public Nullable<System.DateTime> NgayGH { get; set; }
-        public Nullable<int> Trigia { get; set; }
-        public string Sodienthoainhan { get; set; }
-        public Nullable<int> MaUser { get; set; }
+        public string Tenloai { get; set; }
+        public int MaLoai { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChiTietDH> ChiTietDHs { get; set; }
-        public virtual User User { get; set; }
+        public virtual ICollection<SanPham> SanPhams { get; set; }
     }
 }

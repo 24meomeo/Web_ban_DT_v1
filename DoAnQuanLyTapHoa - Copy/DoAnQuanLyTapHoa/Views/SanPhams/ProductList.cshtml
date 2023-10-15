@@ -150,17 +150,15 @@
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="500">
-                <img height="500" src="~/Content/images/slider1.png" class="d-block w-100" alt="...">
+                <img height="500" src="~/Content/images/banner1.png" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item" data-bs-interval="500">
-                <img height="500" src="~/Content/images/slider3.png" class="d-block w-100" alt="...">
+                <img height="500" src="~/Content/images/banner2.png" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item" data-bs-interval="500">
-                <img height="500" src="~/Content/images/slider2.png" class="d-block w-100" alt="...">
+                <img height="500" src="~/Content/images/banner3.png" class="d-block w-100" alt="...">
             </div>
-            <div class="carousel-item" data-bs-interval="500">
-                <img height="500" src="~/Content/images/slider3.png" class="d-block w-100" alt="...">
-            </div>
+            
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -184,11 +182,11 @@
     <div class="row">
         @foreach (var item in Model)
         {
-            decimal price = (decimal)item.GiaSP;
+            decimal price = (decimal)item.GiaSp;
             <div class="col-sm-12 col-sm-6 col-md-3 col-lg-3">
                 <div class="card-pro">
                     <a href="@Url.Action("Details", "SanPhams", new { id = item.MaSP })">
-                        <img class="card-pro-img" src="~/Content/images/@item.HinhSP" />
+                        <img class="card-pro-img" src="~/Content/images/@item.Hinh1" />
                     </a>
                     <p class="card-pro-name">@Html.DisplayFor(model => item.TenSP)</p>
                     <p class="card-pro-price">@price.ToString("#,##0").Replace(',', '.') &#8363 </p>
@@ -211,14 +209,14 @@
 </div>
 
 @* PHẦN BANNER QUẢNG CÁO *@
-<div class="banner-product">
+@*<div class="banner-product">
     <a href="@Url.Action("ProductList", "SanPhams")">
         <picture>
             <source media="(max-width: 767px)" srcset="//theme.hstatic.net/1000288770/1000794542/14/3_banner_htp_1_large.jpg?v=76">
             <img src="~/Content/images/banner2.jpg" alt="banner" width="100%" loading="lazy" />
         </picture>
     </a>
-</div>
+</div>*@
 
 
 @* PHẦN FLASH SALE *@
@@ -231,11 +229,11 @@
     <div class="row">
         @foreach (var item in Model.Take(4))
         {
-            decimal price = (decimal)item.GiaSP;
+            decimal price = (decimal)item.GiaSp;
             <div class="col-sm-12 col-sm-6 col-md-3 col-lg-3">
                 <div class="card-pro card-flashsale">
                     <a href="@Url.Action("Details", "SanPhams", new { id = item.MaSP })">
-                        <img class="card-flashsale-pro-img" src="~/Content/images/@item.HinhSP" />
+                        <img class="card-flashsale-pro-img" src="~/Content/images/@item.Hinh1" />
                     </a>
                     <p class="card-flashsale-pro-name">@Html.DisplayFor(model => item.TenSP)</p>
                     <p class="card-flashsale-pro-price">@price.ToString("###.#00" + "đ")</p>

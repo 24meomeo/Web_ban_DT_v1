@@ -10,7 +10,7 @@ namespace DoAnQuanLyTapHoa.Controllers
     public class XemDonHangController : Controller
 
     {
-        QuanLyTapHoaFinalEntities1 db = new QuanLyTapHoaFinalEntities1();
+        QLBANDTEntities db = new QLBANDTEntities();
 
         //chuẩn bị dữ liệu cho View
         public ActionResult ShowToCart()
@@ -33,10 +33,10 @@ namespace DoAnQuanLyTapHoa.Controllers
             return cart;
         }
         /// Thêm sản phẩm vào giỏ hàng
-        public ActionResult TaoDonHang(string id)
+        public ActionResult TaoDonHang(int id)
         {
             // lấy sản phẩm theo id
-            var pro = db.SanPham.SingleOrDefault(s => s.MaSP == id);
+            var pro = db.SanPhams.SingleOrDefault(s => s.MaSP == id);
             if (pro != null)
             {
                 GetCart().Add_Product_Cart(pro);
@@ -50,7 +50,7 @@ namespace DoAnQuanLyTapHoa.Controllers
         {
             Cart cart = Session["Cart"] as Cart;
 
-            string id_pro = (form["idPro"]);
+            int id_pro = int.Parse(form["idPro"]);
             int _quantity = int.Parse(form["cartQuantity"]);
 
             if(_quantity > 0)
@@ -62,7 +62,7 @@ namespace DoAnQuanLyTapHoa.Controllers
         }
 
         // Xóa dòng sản phẩm trong giỏ hàng
-        public ActionResult RemoveCart(string id)
+        public ActionResult RemoveCart(int id)
         {
             Cart cart = Session["Cart"] as Cart;
             cart.Remove_CartItem(id);
@@ -76,29 +76,28 @@ namespace DoAnQuanLyTapHoa.Controllers
             try
             {
                 Cart cart = Session["Cart"] as Cart;
-                DonHang _order = new DonHang();
+                Order _order = new Order();
                 //_order.MaDH = 3; // chỗ này phải để tự nhảy mã đơn ;
-                _order.NgayMua = DateTime.Now;
-                _order.MaUser = int.Parse(form["NguoiBan"]);
-                _order.TongTien = int.Parse(form["TongTien"]);
-                db.DonHang.Add(_order);
+                _order.DateOr = DateTime.Now;
+                _order.SDT = (form["SDT"]);
+                _order.TenNgNhan = (form["TenNgNhan"]);
+                _order.DiaChiNhan = form["DCNhan"];
+                db.Orders.Add(_order);
                 foreach (var item in cart.Items)
                 {
                     // lưu dòng sản phẩm vào chi tiết hóa đơn
-                    ChiTietDonHang _order_detail = new ChiTietDonHang();
+                    OrdersDetail _order_detail = new OrdersDetail();
                     //_order_detail.MaCTDH = 2;  // chỗ này phải để tự nhảy mã đơn 
-                    _order_detail.MaDH = _order.MaDH;
+                    _order_detail.SoLuong = item._shopping_product.SoLuong;
+                    _order_detail.ThanhTien = item._shopping_product.GiaSp;
                     _order_detail.MaSP = item._shopping_product.MaSP;
-                    _order_detail.DonGia = item._shopping_product.GiaSP;
-                    _order_detail.SoLuong = item._shopping_quantity;
-                    _order_detail.TongTienSP = _order_detail.DonGia * _order_detail.SoLuong;                
-
-                    db.ChiTietDonHang.Add(_order_detail);
+                    _order_detail.MaOr = _order.MaOr;
+                    db.OrdersDetails.Add(_order_detail);
                 }
                 db.SaveChanges();
                 cart.ClearCart();
                 return RedirectToAction("CheckOut_Success", "XemDonHang");
-        }
+            }
             catch
             {
                 return Content("Có sai sót! Xin kiểm tra lại thông tin"); ;

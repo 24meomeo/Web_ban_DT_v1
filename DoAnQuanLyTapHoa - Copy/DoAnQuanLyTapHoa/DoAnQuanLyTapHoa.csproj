@@ -136,10 +136,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoaiSPsController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Controllers\NhaCungCapsController.cs" />
-    <Compile Include="Controllers\NhapHangsController.cs" />
     <Compile Include="Controllers\SanPhamsController.cs" />
-    <Compile Include="Controllers\TrangChuController.cs" />
     <Compile Include="Controllers\UserIDsController.cs" />
     <Compile Include="Controllers\XemDonHangController.cs" />
     <Compile Include="Global.asax.cs">
@@ -148,44 +145,50 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\ChartData.cs" />
-    <Compile Include="Models\ChiTietDonHang.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="Models\ChiTietDH.cs">
+      <DependentUpon>QLBANDTEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DonHang.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLBANDTEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\LoaiSP.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="Models\Mau.cs">
+      <DependentUpon>QLBANDTEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Model1.Context.cs">
+    <Compile Include="Models\Order.cs">
+      <DependentUpon>QLBANDTEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrdersDetail.cs">
+      <DependentUpon>QLBANDTEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PhanLoai.cs">
+      <DependentUpon>QLBANDTEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QLBANDTEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
+      <DependentUpon>QLBANDTEntities.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Model1.cs">
+    <Compile Include="Models\QLBANDTEntities.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLBANDTEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Model1.Designer.cs">
+    <Compile Include="Models\QLBANDTEntities.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\NhaCungCap.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\NhapHang.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLBANDTEntities.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\SanPham.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLBANDTEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\sysdiagrams.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>QLBANDTEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\UserID.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="Models\Vourcher.cs">
+      <DependentUpon>QLBANDTEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\YeuThich.cs">
+      <DependentUpon>QLBANDTEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -208,25 +211,13 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\dn.css" />
     <Content Include="Content\GiaodienKH.css" />
-    <Content Include="Content\images\banhsnack.jpg" />
-    <Content Include="Content\images\banhsnack1.jpg" />
-    <Content Include="Content\images\banner1.jpg" />
-    <Content Include="Content\images\banner2.jpg" />
-    <Content Include="Content\images\biatiger.jpg" />
-    <Content Include="Content\images\coca.png" />
-    <Content Include="Content\images\danancailan.jpg" />
-    <Content Include="Content\images\dauanhappi.jpg" />
-    <Content Include="Content\images\dauantuongan.jpg" />
-    <Content Include="Content\images\duongmiatoanphat.jpg" />
-    <Content Include="Content\images\duongmiatrang.jpg" />
-    <Content Include="Content\images\duongvang.jpg" />
-    <Content Include="Content\images\logobrand.jpg" />
-    <Content Include="Content\images\logotiemtaphoa.png" />
-    <Content Include="Content\images\mi3mien.jpg" />
-    <Content Include="Content\images\migaudochuacay.jpg" />
-    <Content Include="Content\images\migaudothitbam.jpg" />
-    <Content Include="Content\images\nuoctinhkhiet.jpg" />
-    <Content Include="Content\images\pepsi.png" />
+    <Content Include="Content\images\banner1.png" />
+    <Content Include="Content\images\banner2.png" />
+    <Content Include="Content\images\banner3.png" />
+    <Content Include="Content\images\header banner.png" />
+    <Content Include="Content\images\iphone-14-pro-max-den.png" />
+    <Content Include="Content\images\iphone15.png" />
+    <Content Include="Content\images\oppo-renon10-pro.png" />
     <Content Include="Content\images\quanlydathang.png" />
     <Content Include="Content\images\quanlyloaisanpham.jpg" />
     <Content Include="Content\images\quanlyloaisanpham1.jpg" />
@@ -234,27 +225,23 @@
     <Content Include="Content\images\quanlynhanvien1.jpg" />
     <Content Include="Content\images\quanlysanpham.jpg" />
     <Content Include="Content\images\quanlysanpham1.jpg" />
-    <Content Include="Content\images\slider1.png" />
-    <Content Include="Content\images\slider2.png" />
-    <Content Include="Content\images\slider3.png" />
-    <Content Include="Content\images\slider4.jpg" />
+    <Content Include="Content\images\sumsungs23.png" />
     <Content Include="Content\images\thanhtoanthanhcong.png" />
     <Content Include="Content\images\vidBanHang.mp4" />
-    <Content Include="Content\images\xaxi.jpg" />
     <Content Include="Content\masterlayout.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="LICENSE.txt" />
-    <Content Include="Models\Model1.Context.tt">
+    <Content Include="Models\QLBANDTEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>QLBANDTEntities.edmx</DependentUpon>
+      <LastGenOutput>QLBANDTEntities.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Model1.tt">
+    <Content Include="Models\QLBANDTEntities.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
+      <DependentUpon>QLBANDTEntities.edmx</DependentUpon>
+      <LastGenOutput>QLBANDTEntities.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -284,12 +271,12 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <EntityDeploy Include="Models\Model1.edmx">
+    <EntityDeploy Include="Models\QLBANDTEntities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>QLBANDTEntities.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <Content Include="Models\QLBANDTEntities.edmx.diagram">
+      <DependentUpon>QLBANDTEntities.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
