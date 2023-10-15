@@ -88,7 +88,7 @@ namespace DoAnQuanLyTapHoa.Controllers
                     // lưu dòng sản phẩm vào chi tiết hóa đơn
                     OrdersDetail _order_detail = new OrdersDetail();
                     //_order_detail.MaCTDH = 2;  // chỗ này phải để tự nhảy mã đơn 
-                    _order_detail.SoLuong = item._shopping_product.SoLuong;
+                    _order_detail.SoLuong = item._shopping_quantity;
                     _order_detail.ThanhTien = item._shopping_product.GiaSp;
                     _order_detail.MaSP = item._shopping_product.MaSP;
                     _order_detail.MaOr = _order.MaOr;

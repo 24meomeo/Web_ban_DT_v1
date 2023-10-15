@@ -1,4 +1,4 @@
-﻿@model IEnumerable<DoAnQuanLyTapHoa.Models.LoaiSP>
+﻿@model IEnumerable<DoAnQuanLyTapHoa.Models.PhanLoai>
 
 @{
     ViewBag.Title = "Index";
@@ -8,39 +8,32 @@
 <div class="headerOfQuanLy">
     <h2 class="headerTextOfQuanLy">Quản lý Danh Mục Loại Sản Phẩm</h2>
 
-    <p class="createNew">
-        @Html.ActionLink("Thêm Mới", "Create", "LoaiSPs", null, new { @class = "createNew btn btn-light" })
+    @*<h2 style="text-align:center">Loại sản phẩm</h2>*@
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
     </p>
-</div>
-
-<table class="table">
-    <tr>
-        <th>
-            <p>Mã Loại </p>
-            @*@Html.DisplayNameFor(model => model.MaLoai)*@
-        </th>
-        <th>
-            <p>Tên Loại</p>
-            @*@Html.DisplayNameFor(model => model.TenLoai)*@
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
+    <table class="table">
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.MaLoai)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TenLoai)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.MaLoai }) |
-                @*@Html.ActionLink("Details", "Details", new { id = item.TenLoai }) |*@
-                @Html.ActionLink("Delete", "Delete", new { id = item.MaLoai })
-            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.Tenloai)
+            </th>
+            <th></th>
         </tr>
-    }
 
-</table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tenloai)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MaLoai }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.MaLoai }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MaLoai })
+                </td>
+            </tr>
+        }
+
+    </table>
+
