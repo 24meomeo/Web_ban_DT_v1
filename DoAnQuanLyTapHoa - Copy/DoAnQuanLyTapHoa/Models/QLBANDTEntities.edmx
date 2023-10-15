@@ -107,7 +107,11 @@ warning 6002: The table/view 'QLBANDT.dbo.ChiTietDH' does not have a primary key
           <Property Name="MaSP" Type="int" Nullable="false" />
           <Property Name="MaUser" Type="int" Nullable="false" />
         </EntityType>
+<<<<<<< HEAD
         <Association Name="FK__ChiTietDH__MaDH__2F10007B">
+=======
+        <Association Name="FK__ChiTietDH__MaDH__4222D4EF">
+>>>>>>> 52152f9c2bce6884b6d4b25ae5857bb0c548e7ab
           <End Role="DonHang" Type="Self.DonHang" Multiplicity="1" />
           <End Role="ChiTietDH" Type="Self.ChiTietDH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -119,7 +123,11 @@ warning 6002: The table/view 'QLBANDT.dbo.ChiTietDH' does not have a primary key
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__ChiTietDH__MaSP__300424B4">
+=======
+        <Association Name="FK__ChiTietDH__MaSP__4316F928">
+>>>>>>> 52152f9c2bce6884b6d4b25ae5857bb0c548e7ab
           <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
           <End Role="ChiTietDH" Type="Self.ChiTietDH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -131,7 +139,11 @@ warning 6002: The table/view 'QLBANDT.dbo.ChiTietDH' does not have a primary key
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__DonHang__MaUser__267ABA7A">
+=======
+        <Association Name="FK__DonHang__MaUser__398D8EEE">
+>>>>>>> 52152f9c2bce6884b6d4b25ae5857bb0c548e7ab
           <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
           <End Role="DonHang" Type="Self.DonHang" Multiplicity="*" />
           <ReferentialConstraint>
@@ -143,7 +155,11 @@ warning 6002: The table/view 'QLBANDT.dbo.ChiTietDH' does not have a primary key
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Mau_sp__Mamau__398D8EEE">
+=======
+        <Association Name="FK__Mau_sp__Mamau__4CA06362">
+>>>>>>> 52152f9c2bce6884b6d4b25ae5857bb0c548e7ab
           <End Role="Mau" Type="Self.Mau" Multiplicity="1" />
           <End Role="Mau_sp" Type="Self.Mau_sp" Multiplicity="*" />
           <ReferentialConstraint>
@@ -155,7 +171,11 @@ warning 6002: The table/view 'QLBANDT.dbo.ChiTietDH' does not have a primary key
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Mau_sp__MaSP__3A81B327">
+=======
+        <Association Name="FK__Mau_sp__MaSP__4D94879B">
+>>>>>>> 52152f9c2bce6884b6d4b25ae5857bb0c548e7ab
           <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
           <End Role="Mau_sp" Type="Self.Mau_sp" Multiplicity="*" />
           <ReferentialConstraint>
@@ -167,7 +187,35 @@ warning 6002: The table/view 'QLBANDT.dbo.ChiTietDH' does not have a primary key
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__SanPham__MaLoai__2D27B809">
+=======
+        <Association Name="FK__OrdersDeta__MaOr__534D60F1">
+          <End Role="Orders" Type="Self.Orders" Multiplicity="0..1" />
+          <End Role="OrdersDetail" Type="Self.OrdersDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="MaOr" />
+            </Principal>
+            <Dependent Role="OrdersDetail">
+              <PropertyRef Name="MaOr" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__OrdersDeta__MaSP__52593CB8">
+          <End Role="SanPham" Type="Self.SanPham" Multiplicity="0..1" />
+          <End Role="OrdersDetail" Type="Self.OrdersDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="MaSP" />
+            </Principal>
+            <Dependent Role="OrdersDetail">
+              <PropertyRef Name="MaSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SanPham__MaLoai__403A8C7D">
+>>>>>>> 52152f9c2bce6884b6d4b25ae5857bb0c548e7ab
           <End Role="PhanLoai" Type="Self.PhanLoai" Multiplicity="1" />
           <End Role="SanPham" Type="Self.SanPham" Multiplicity="*" />
           <ReferentialConstraint>
@@ -179,7 +227,11 @@ warning 6002: The table/view 'QLBANDT.dbo.ChiTietDH' does not have a primary key
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Vourcher__MaSP__36B12243">
+=======
+        <Association Name="FK__Vourcher__MaSP__49C3F6B7">
+>>>>>>> 52152f9c2bce6884b6d4b25ae5857bb0c548e7ab
           <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
           <End Role="Vourcher" Type="Self.Vourcher" Multiplicity="*" />
           <ReferentialConstraint>
@@ -191,7 +243,11 @@ warning 6002: The table/view 'QLBANDT.dbo.ChiTietDH' does not have a primary key
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__YeuThich__MaSP__32E0915F">
+=======
+        <Association Name="FK__YeuThich__MaSP__45F365D3">
+>>>>>>> 52152f9c2bce6884b6d4b25ae5857bb0c548e7ab
           <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
           <End Role="YeuThich" Type="Self.YeuThich" Multiplicity="*" />
           <ReferentialConstraint>
@@ -203,7 +259,11 @@ warning 6002: The table/view 'QLBANDT.dbo.ChiTietDH' does not have a primary key
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__YeuThich__MaUser__33D4B598">
+=======
+        <Association Name="FK__YeuThich__MaUser__46E78A0C">
+>>>>>>> 52152f9c2bce6884b6d4b25ae5857bb0c548e7ab
           <End Role="Users" Type="Self.Users" Multiplicity="1" />
           <End Role="YeuThich" Type="Self.YeuThich" Multiplicity="*" />
           <ReferentialConstraint>
@@ -233,6 +293,7 @@ warning 6002: The table/view 'QLBANDT.dbo.ChiTietDH' does not have a primary key
     [ChiTietDH].[MaSP] AS [MaSP]
     FROM [dbo].[ChiTietDH] AS [ChiTietDH]</DefiningQuery>
           </EntitySet>
+<<<<<<< HEAD
           <AssociationSet Name="FK__ChiTietDH__MaDH__2F10007B" Association="Self.FK__ChiTietDH__MaDH__2F10007B">
             <End Role="DonHang" EntitySet="DonHang" />
             <End Role="ChiTietDH" EntitySet="ChiTietDH" />
@@ -266,6 +327,49 @@ warning 6002: The table/view 'QLBANDT.dbo.ChiTietDH' does not have a primary key
             <End Role="YeuThich" EntitySet="YeuThich" />
           </AssociationSet>
           <AssociationSet Name="FK__YeuThich__MaUser__33D4B598" Association="Self.FK__YeuThich__MaUser__33D4B598">
+=======
+          <AssociationSet Name="FK__ChiTietDH__MaDH__4222D4EF" Association="Self.FK__ChiTietDH__MaDH__4222D4EF">
+            <End Role="DonHang" EntitySet="DonHang" />
+            <End Role="ChiTietDH" EntitySet="ChiTietDH" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ChiTietDH__MaSP__4316F928" Association="Self.FK__ChiTietDH__MaSP__4316F928">
+            <End Role="SanPham" EntitySet="SanPham" />
+            <End Role="ChiTietDH" EntitySet="ChiTietDH" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DonHang__MaUser__398D8EEE" Association="Self.FK__DonHang__MaUser__398D8EEE">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="DonHang" EntitySet="DonHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Mau_sp__Mamau__4CA06362" Association="Self.FK__Mau_sp__Mamau__4CA06362">
+            <End Role="Mau" EntitySet="Mau" />
+            <End Role="Mau_sp" EntitySet="Mau_sp" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Mau_sp__MaSP__4D94879B" Association="Self.FK__Mau_sp__MaSP__4D94879B">
+            <End Role="SanPham" EntitySet="SanPham" />
+            <End Role="Mau_sp" EntitySet="Mau_sp" />
+          </AssociationSet>
+          <AssociationSet Name="FK__OrdersDeta__MaOr__534D60F1" Association="Self.FK__OrdersDeta__MaOr__534D60F1">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="OrdersDetail" EntitySet="OrdersDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK__OrdersDeta__MaSP__52593CB8" Association="Self.FK__OrdersDeta__MaSP__52593CB8">
+            <End Role="SanPham" EntitySet="SanPham" />
+            <End Role="OrdersDetail" EntitySet="OrdersDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SanPham__MaLoai__403A8C7D" Association="Self.FK__SanPham__MaLoai__403A8C7D">
+            <End Role="PhanLoai" EntitySet="PhanLoai" />
+            <End Role="SanPham" EntitySet="SanPham" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vourcher__MaSP__49C3F6B7" Association="Self.FK__Vourcher__MaSP__49C3F6B7">
+            <End Role="SanPham" EntitySet="SanPham" />
+            <End Role="Vourcher" EntitySet="Vourcher" />
+          </AssociationSet>
+          <AssociationSet Name="FK__YeuThich__MaSP__45F365D3" Association="Self.FK__YeuThich__MaSP__45F365D3">
+            <End Role="SanPham" EntitySet="SanPham" />
+            <End Role="YeuThich" EntitySet="YeuThich" />
+          </AssociationSet>
+          <AssociationSet Name="FK__YeuThich__MaUser__46E78A0C" Association="Self.FK__YeuThich__MaUser__46E78A0C">
+>>>>>>> 52152f9c2bce6884b6d4b25ae5857bb0c548e7ab
             <End Role="Users" EntitySet="Users" />
             <End Role="YeuThich" EntitySet="YeuThich" />
           </AssociationSet>
@@ -288,8 +392,13 @@ warning 6002: The table/view 'QLBANDT.dbo.ChiTietDH' does not have a primary key
           <Property Name="Trigia" Type="Int32" />
           <Property Name="Sodienthoainhan" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="MaUser" Type="Int32" />
+<<<<<<< HEAD
           <NavigationProperty Name="ChiTietDHs" Relationship="Self.FK__ChiTietDH__MaDH__2F10007B" FromRole="DonHang" ToRole="ChiTietDH" />
           <NavigationProperty Name="User" Relationship="Self.FK__DonHang__MaUser__267ABA7A" FromRole="DonHang" ToRole="Users" />
+=======
+          <NavigationProperty Name="ChiTietDHs" Relationship="Self.FK__ChiTietDH__MaDH__4222D4EF" FromRole="DonHang" ToRole="ChiTietDH" />
+          <NavigationProperty Name="User" Relationship="Self.FK__DonHang__MaUser__398D8EEE" FromRole="DonHang" ToRole="Users" />
+>>>>>>> 52152f9c2bce6884b6d4b25ae5857bb0c548e7ab
         </EntityType>
         <EntityType Name="Mau">
           <Key>
@@ -299,13 +408,43 @@ warning 6002: The table/view 'QLBANDT.dbo.ChiTietDH' does not have a primary key
           <Property Name="Mamau" Type="Int32" Nullable="false" />
           <NavigationProperty Name="SanPhams" Relationship="Self.Mau_sp" FromRole="Mau" ToRole="SanPham" />
         </EntityType>
+<<<<<<< HEAD
+=======
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="MaOr" />
+          </Key>
+          <Property Name="MaOr" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateOr" Type="DateTime" Precision="0" />
+          <Property Name="SDT" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="TenNgNhan" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="DiaChiNhan" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="OrdersDetails" Relationship="Self.FK__OrdersDeta__MaOr__534D60F1" FromRole="Orders" ToRole="OrdersDetail" />
+        </EntityType>
+        <EntityType Name="OrdersDetail">
+          <Key>
+            <PropertyRef Name="MaOrD" />
+          </Key>
+          <Property Name="MaOrD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SoLuong" Type="Int32" />
+          <Property Name="ThanhTien" Type="Int32" />
+          <Property Name="MaSP" Type="Int32" />
+          <Property Name="MaOr" Type="Int32" />
+          <NavigationProperty Name="Order" Relationship="Self.FK__OrdersDeta__MaOr__534D60F1" FromRole="OrdersDetail" ToRole="Orders" />
+          <NavigationProperty Name="SanPham" Relationship="Self.FK__OrdersDeta__MaSP__52593CB8" FromRole="OrdersDetail" ToRole="SanPham" />
+        </EntityType>
+>>>>>>> 52152f9c2bce6884b6d4b25ae5857bb0c548e7ab
         <EntityType Name="PhanLoai">
           <Key>
             <PropertyRef Name="MaLoai" />
           </Key>
           <Property Name="Tenloai" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="MaLoai" Type="Int32" Nullable="false" />
+<<<<<<< HEAD
           <NavigationProperty Name="SanPhams" Relationship="Self.FK__SanPham__MaLoai__2D27B809" FromRole="PhanLoai" ToRole="SanPham" />
+=======
+          <NavigationProperty Name="SanPhams" Relationship="Self.FK__SanPham__MaLoai__403A8C7D" FromRole="PhanLoai" ToRole="SanPham" />
+>>>>>>> 52152f9c2bce6884b6d4b25ae5857bb0c548e7ab
         </EntityType>
         <EntityType Name="SanPham">
           <Key>
@@ -324,10 +463,18 @@ warning 6002: The table/view 'QLBANDT.dbo.ChiTietDH' does not have a primary key
           <Property Name="Mota" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Thongso" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="MaLoai" Type="Int32" Nullable="false" />
+<<<<<<< HEAD
           <NavigationProperty Name="PhanLoai" Relationship="Self.FK__SanPham__MaLoai__2D27B809" FromRole="SanPham" ToRole="PhanLoai" />
           <NavigationProperty Name="ChiTietDHs" Relationship="Self.FK__ChiTietDH__MaSP__300424B4" FromRole="SanPham" ToRole="ChiTietDH" />
           <NavigationProperty Name="Vourchers" Relationship="Self.FK__Vourcher__MaSP__36B12243" FromRole="SanPham" ToRole="Vourcher" />
           <NavigationProperty Name="YeuThiches" Relationship="Self.FK__YeuThich__MaSP__32E0915F" FromRole="SanPham" ToRole="YeuThich" />
+=======
+          <NavigationProperty Name="OrdersDetails" Relationship="Self.FK__OrdersDeta__MaSP__52593CB8" FromRole="SanPham" ToRole="OrdersDetail" />
+          <NavigationProperty Name="PhanLoai" Relationship="Self.FK__SanPham__MaLoai__403A8C7D" FromRole="SanPham" ToRole="PhanLoai" />
+          <NavigationProperty Name="ChiTietDHs" Relationship="Self.FK__ChiTietDH__MaSP__4316F928" FromRole="SanPham" ToRole="ChiTietDH" />
+          <NavigationProperty Name="Vourchers" Relationship="Self.FK__Vourcher__MaSP__49C3F6B7" FromRole="SanPham" ToRole="Vourcher" />
+          <NavigationProperty Name="YeuThiches" Relationship="Self.FK__YeuThich__MaSP__45F365D3" FromRole="SanPham" ToRole="YeuThich" />
+>>>>>>> 52152f9c2bce6884b6d4b25ae5857bb0c548e7ab
           <NavigationProperty Name="Maus" Relationship="Self.Mau_sp" FromRole="SanPham" ToRole="Mau" />
         </EntityType>
         <EntityType Name="User">
@@ -344,8 +491,13 @@ warning 6002: The table/view 'QLBANDT.dbo.ChiTietDH' does not have a primary key
           <Property Name="Pass" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Roleuser" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="Hinh" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+<<<<<<< HEAD
           <NavigationProperty Name="DonHangs" Relationship="Self.FK__DonHang__MaUser__267ABA7A" FromRole="Users" ToRole="DonHang" />
           <NavigationProperty Name="YeuThiches" Relationship="Self.FK__YeuThich__MaUser__33D4B598" FromRole="Users" ToRole="YeuThich" />
+=======
+          <NavigationProperty Name="DonHangs" Relationship="Self.FK__DonHang__MaUser__398D8EEE" FromRole="Users" ToRole="DonHang" />
+          <NavigationProperty Name="YeuThiches" Relationship="Self.FK__YeuThich__MaUser__46E78A0C" FromRole="Users" ToRole="YeuThich" />
+>>>>>>> 52152f9c2bce6884b6d4b25ae5857bb0c548e7ab
         </EntityType>
         <EntityType Name="Vourcher">
           <Key>
@@ -355,7 +507,11 @@ warning 6002: The table/view 'QLBANDT.dbo.ChiTietDH' does not have a primary key
           <Property Name="Uudai" Type="Int32" />
           <Property Name="ThongTinUuDai" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="MaSP" Type="Int32" Nullable="false" />
+<<<<<<< HEAD
           <NavigationProperty Name="SanPham" Relationship="Self.FK__Vourcher__MaSP__36B12243" FromRole="Vourcher" ToRole="SanPham" />
+=======
+          <NavigationProperty Name="SanPham" Relationship="Self.FK__Vourcher__MaSP__49C3F6B7" FromRole="Vourcher" ToRole="SanPham" />
+>>>>>>> 52152f9c2bce6884b6d4b25ae5857bb0c548e7ab
         </EntityType>
         <EntityType Name="YeuThich">
           <Key>
@@ -364,8 +520,13 @@ warning 6002: The table/view 'QLBANDT.dbo.ChiTietDH' does not have a primary key
           <Property Name="MaYT" Type="Int32" Nullable="false" />
           <Property Name="MaSP" Type="Int32" Nullable="false" />
           <Property Name="MaUser" Type="Int32" Nullable="false" />
+<<<<<<< HEAD
           <NavigationProperty Name="SanPham" Relationship="Self.FK__YeuThich__MaSP__32E0915F" FromRole="YeuThich" ToRole="SanPham" />
           <NavigationProperty Name="User" Relationship="Self.FK__YeuThich__MaUser__33D4B598" FromRole="YeuThich" ToRole="Users" />
+=======
+          <NavigationProperty Name="SanPham" Relationship="Self.FK__YeuThich__MaSP__45F365D3" FromRole="YeuThich" ToRole="SanPham" />
+          <NavigationProperty Name="User" Relationship="Self.FK__YeuThich__MaUser__46E78A0C" FromRole="YeuThich" ToRole="Users" />
+>>>>>>> 52152f9c2bce6884b6d4b25ae5857bb0c548e7ab
         </EntityType>
         <EntityType Name="ChiTietDH">
           <Key>
@@ -380,10 +541,17 @@ warning 6002: The table/view 'QLBANDT.dbo.ChiTietDH' does not have a primary key
           <Property Name="ThanhTien" Type="Int32" Nullable="false" />
           <Property Name="MaDH" Type="Int32" Nullable="false" />
           <Property Name="MaSP" Type="Int32" Nullable="false" />
+<<<<<<< HEAD
           <NavigationProperty Name="DonHang" Relationship="Self.FK__ChiTietDH__MaDH__2F10007B" FromRole="ChiTietDH" ToRole="DonHang" />
           <NavigationProperty Name="SanPham" Relationship="Self.FK__ChiTietDH__MaSP__300424B4" FromRole="ChiTietDH" ToRole="SanPham" />
         </EntityType>
         <Association Name="FK__ChiTietDH__MaDH__2F10007B">
+=======
+          <NavigationProperty Name="DonHang" Relationship="Self.FK__ChiTietDH__MaDH__4222D4EF" FromRole="ChiTietDH" ToRole="DonHang" />
+          <NavigationProperty Name="SanPham" Relationship="Self.FK__ChiTietDH__MaSP__4316F928" FromRole="ChiTietDH" ToRole="SanPham" />
+        </EntityType>
+        <Association Name="FK__ChiTietDH__MaDH__4222D4EF">
+>>>>>>> 52152f9c2bce6884b6d4b25ae5857bb0c548e7ab
           <End Role="DonHang" Type="Self.DonHang" Multiplicity="1" />
           <End Role="ChiTietDH" Type="Self.ChiTietDH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -395,7 +563,11 @@ warning 6002: The table/view 'QLBANDT.dbo.ChiTietDH' does not have a primary key
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__DonHang__MaUser__267ABA7A">
+=======
+        <Association Name="FK__DonHang__MaUser__398D8EEE">
+>>>>>>> 52152f9c2bce6884b6d4b25ae5857bb0c548e7ab
           <End Role="Users" Type="Self.User" Multiplicity="0..1" />
           <End Role="DonHang" Type="Self.DonHang" Multiplicity="*" />
           <ReferentialConstraint>
@@ -407,7 +579,35 @@ warning 6002: The table/view 'QLBANDT.dbo.ChiTietDH' does not have a primary key
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__SanPham__MaLoai__2D27B809">
+=======
+        <Association Name="FK__OrdersDeta__MaOr__534D60F1">
+          <End Role="Orders" Type="Self.Order" Multiplicity="0..1" />
+          <End Role="OrdersDetail" Type="Self.OrdersDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="MaOr" />
+            </Principal>
+            <Dependent Role="OrdersDetail">
+              <PropertyRef Name="MaOr" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__OrdersDeta__MaSP__52593CB8">
+          <End Role="SanPham" Type="Self.SanPham" Multiplicity="0..1" />
+          <End Role="OrdersDetail" Type="Self.OrdersDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="MaSP" />
+            </Principal>
+            <Dependent Role="OrdersDetail">
+              <PropertyRef Name="MaSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SanPham__MaLoai__403A8C7D">
+>>>>>>> 52152f9c2bce6884b6d4b25ae5857bb0c548e7ab
           <End Role="PhanLoai" Type="Self.PhanLoai" Multiplicity="1" />
           <End Role="SanPham" Type="Self.SanPham" Multiplicity="*" />
           <ReferentialConstraint>
@@ -419,7 +619,11 @@ warning 6002: The table/view 'QLBANDT.dbo.ChiTietDH' does not have a primary key
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__ChiTietDH__MaSP__300424B4">
+=======
+        <Association Name="FK__ChiTietDH__MaSP__4316F928">
+>>>>>>> 52152f9c2bce6884b6d4b25ae5857bb0c548e7ab
           <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
           <End Role="ChiTietDH" Type="Self.ChiTietDH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -431,7 +635,11 @@ warning 6002: The table/view 'QLBANDT.dbo.ChiTietDH' does not have a primary key
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Vourcher__MaSP__36B12243">
+=======
+        <Association Name="FK__Vourcher__MaSP__49C3F6B7">
+>>>>>>> 52152f9c2bce6884b6d4b25ae5857bb0c548e7ab
           <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
           <End Role="Vourcher" Type="Self.Vourcher" Multiplicity="*" />
           <ReferentialConstraint>
@@ -443,7 +651,11 @@ warning 6002: The table/view 'QLBANDT.dbo.ChiTietDH' does not have a primary key
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__YeuThich__MaSP__32E0915F">
+=======
+        <Association Name="FK__YeuThich__MaSP__45F365D3">
+>>>>>>> 52152f9c2bce6884b6d4b25ae5857bb0c548e7ab
           <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
           <End Role="YeuThich" Type="Self.YeuThich" Multiplicity="*" />
           <ReferentialConstraint>
@@ -455,7 +667,11 @@ warning 6002: The table/view 'QLBANDT.dbo.ChiTietDH' does not have a primary key
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__YeuThich__MaUser__33D4B598">
+=======
+        <Association Name="FK__YeuThich__MaUser__46E78A0C">
+>>>>>>> 52152f9c2bce6884b6d4b25ae5857bb0c548e7ab
           <End Role="Users" Type="Self.User" Multiplicity="1" />
           <End Role="YeuThich" Type="Self.YeuThich" Multiplicity="*" />
           <ReferentialConstraint>
@@ -480,6 +696,7 @@ warning 6002: The table/view 'QLBANDT.dbo.ChiTietDH' does not have a primary key
           <EntitySet Name="Vourchers" EntityType="Self.Vourcher" />
           <EntitySet Name="YeuThiches" EntityType="Self.YeuThich" />
           <EntitySet Name="ChiTietDHs" EntityType="Self.ChiTietDH" />
+<<<<<<< HEAD
           <AssociationSet Name="FK__ChiTietDH__MaDH__2F10007B" Association="Self.FK__ChiTietDH__MaDH__2F10007B">
             <End Role="DonHang" EntitySet="DonHangs" />
             <End Role="ChiTietDH" EntitySet="ChiTietDHs" />
@@ -505,6 +722,41 @@ warning 6002: The table/view 'QLBANDT.dbo.ChiTietDH' does not have a primary key
             <End Role="YeuThich" EntitySet="YeuThiches" />
           </AssociationSet>
           <AssociationSet Name="FK__YeuThich__MaUser__33D4B598" Association="Self.FK__YeuThich__MaUser__33D4B598">
+=======
+          <AssociationSet Name="FK__ChiTietDH__MaDH__4222D4EF" Association="Self.FK__ChiTietDH__MaDH__4222D4EF">
+            <End Role="DonHang" EntitySet="DonHangs" />
+            <End Role="ChiTietDH" EntitySet="ChiTietDHs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DonHang__MaUser__398D8EEE" Association="Self.FK__DonHang__MaUser__398D8EEE">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="DonHang" EntitySet="DonHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__OrdersDeta__MaOr__534D60F1" Association="Self.FK__OrdersDeta__MaOr__534D60F1">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="OrdersDetail" EntitySet="OrdersDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__OrdersDeta__MaSP__52593CB8" Association="Self.FK__OrdersDeta__MaSP__52593CB8">
+            <End Role="SanPham" EntitySet="SanPhams" />
+            <End Role="OrdersDetail" EntitySet="OrdersDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SanPham__MaLoai__403A8C7D" Association="Self.FK__SanPham__MaLoai__403A8C7D">
+            <End Role="PhanLoai" EntitySet="PhanLoais" />
+            <End Role="SanPham" EntitySet="SanPhams" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ChiTietDH__MaSP__4316F928" Association="Self.FK__ChiTietDH__MaSP__4316F928">
+            <End Role="SanPham" EntitySet="SanPhams" />
+            <End Role="ChiTietDH" EntitySet="ChiTietDHs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vourcher__MaSP__49C3F6B7" Association="Self.FK__Vourcher__MaSP__49C3F6B7">
+            <End Role="SanPham" EntitySet="SanPhams" />
+            <End Role="Vourcher" EntitySet="Vourchers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__YeuThich__MaSP__45F365D3" Association="Self.FK__YeuThich__MaSP__45F365D3">
+            <End Role="SanPham" EntitySet="SanPhams" />
+            <End Role="YeuThich" EntitySet="YeuThiches" />
+          </AssociationSet>
+          <AssociationSet Name="FK__YeuThich__MaUser__46E78A0C" Association="Self.FK__YeuThich__MaUser__46E78A0C">
+>>>>>>> 52152f9c2bce6884b6d4b25ae5857bb0c548e7ab
             <End Role="Users" EntitySet="Users" />
             <End Role="YeuThich" EntitySet="YeuThiches" />
           </AssociationSet>

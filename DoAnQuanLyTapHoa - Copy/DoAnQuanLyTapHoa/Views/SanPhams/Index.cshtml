@@ -5,15 +5,18 @@
     Layout = "~/Views/Shared/MasterLayout.cshtml";
 }
 
-<div class="headerOfQuanLy">
-    <h2 class="headerTextOfQuanLy">Quản lý Sản Phẩm</h2>
+@*<div class="headerOfQuanLy">
+        <h2 class="headerTextOfQuanLy">Quản lý Sản Phẩm</h2>
 
-    <p class="createNew">
-        @Html.ActionLink("Thêm Mới", "Create", "SanPhams", null, new { @class = "createNew btn btn-light" })
-    </p>
-</div>
+        <p class="createNew">
+            @Html.ActionLink("Thêm Mới", "Create", "SanPhams", null, new { @class = "createNew btn btn-light" })
+        </p>
+    </div>*@
 
 
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
 <table class="table">
     <tr>
         <th>
@@ -21,6 +24,7 @@
             <p>Tên sản phẩm</p>
         </th>
         <th>
+<<<<<<< HEAD
             @Html.DisplayNameFor(model => model.Hinh1)
             <p>Hình sản phẩm</p>
         </th>
@@ -34,18 +38,63 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.SoLuong)
+=======
+            @*@Html.DisplayNameFor(model => model.GiaSp)*@
+            <p>Giá sản phẩm</p>
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.GiaGiam)*@
+            <p>Gía giảm</p>
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.SoLuong)*@
+>>>>>>> 52152f9c2bce6884b6d4b25ae5857bb0c548e7ab
             <p>Số lượng</p>
         </th>
         
         <th>
+<<<<<<< HEAD
             @Html.DisplayNameFor(model => model.PhanLoai.Tenloai)
             Loại 
+=======
+            @*@Html.DisplayNameFor(model => model.Hinh1)*@
+            <p>Hình 1</p>
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Hinh2)*@
+            <p>Hình 2</p>
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Hinh3)*@
+            <p>Hình 3</p>
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Hinh4)*@
+            <p>Hình 4</p>
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Hinh5)*@
+            <p>Hình 5</p>
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Mota)*@
+            <p>Mô tả</p>
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Thongso)*@
+            <p>Thông số</p>
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.PhanLoai.Tenloai)*@
+            <p>Tên loại</p>
+>>>>>>> 52152f9c2bce6884b6d4b25ae5857bb0c548e7ab
         </th>
         <th></th>
     </tr>
 
     @foreach (var item in Model)
     {
+<<<<<<< HEAD
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.TenSP)
@@ -74,5 +123,52 @@
             </td>
         </tr>
     }
+=======
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.TenSP)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.GiaSp)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.GiaGiam)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.SoLuong)
+    </td>
+    <td>
+        @*@Html.DisplayFor(modelItem => item.Hinh1)*@
+        <img src="~/Content/images/@item.Hinh1" width="60" />
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Hinh2)
+>>>>>>> 52152f9c2bce6884b6d4b25ae5857bb0c548e7ab
+
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Hinh3)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Hinh4)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Hinh5)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Mota)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Thongso)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PhanLoai.Tenloai)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.MaSP }) |
+        @Html.ActionLink("Details", "Details", new { id = item.MaSP }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.MaSP })
+    </td>
+</tr>}
 
 </table>
