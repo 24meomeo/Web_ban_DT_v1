@@ -17,31 +17,28 @@
 <table class="table">
     <tr>
         <th>
-            @*@Html.DisplayNameFor(model => model.TenSP)*@
+            @Html.DisplayNameFor(model => model.TenSP)
             <p>Tên sản phẩm</p>
         </th>
         <th>
-            @*@Html.DisplayNameFor(model => model.HinhSP)*@
+            @Html.DisplayNameFor(model => model.Hinh1)
             <p>Hình sản phẩm</p>
         </th>
         <th>
-            @*@Html.DisplayNameFor(model => model.MoTaSP)*@
+            @Html.DisplayNameFor(model => model.Mota)
             <p>Mô tả</p>
         </th>
         <th>
-            @*@Html.DisplayNameFor(model => model.GiaSP)*@
+            @Html.DisplayNameFor(model => model.GiaSp)
             <p>Giá</p>
         </th>
         <th>
-            @*@Html.DisplayNameFor(model => model.SoLuongSP)*@
+            @Html.DisplayNameFor(model => model.SoLuong)
             <p>Số lượng</p>
         </th>
+        
         <th>
-            @*@Html.DisplayNameFor(model => model.MaNSX)*@
-            <p>Nhà sản xuất</p>
-        </th>
-        <th>
-            @*@Html.DisplayNameFor(model => model.LoaiSP.TenLoai)*@
+            @Html.DisplayNameFor(model => model.PhanLoai.Tenloai)
             Loại 
         </th>
         <th></th>
@@ -54,23 +51,21 @@
                 @Html.DisplayFor(modelItem => item.TenSP)
             </td>
             <td>
-                @*@Html.DisplayFor(modelItem => item.HinhSP)*@
-                <img src="~/Content/images/@item.HinhSP" width="60" />
+                @Html.DisplayFor(modelItem => item.Hinh1)
+                <img src="~/Content/images/@item.Hinh1" width="60" />
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.MoTaSP)
+                @Html.DisplayFor(modelItem => item.Mota)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.GiaSP)
+                @Html.DisplayFor(modelItem => item.GiaSp)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.SoLuongSP)
+                @Html.DisplayFor(modelItem => item.SoLuong)
             </td>
+          
             <td>
-                @Html.DisplayFor(modelItem => item.MaNSX)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LoaiSP.TenLoai)
+                @Html.DisplayFor(modelItem => item.PhanLoai.Tenloai)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.MaSP }) |

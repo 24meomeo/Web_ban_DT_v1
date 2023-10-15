@@ -339,3 +339,7 @@ D:\Tai Lieu\Kien Thuc\Hoc ky 1 nam 3\CNPMNC-LT\DoAnNhom8\Web_ban_DT_v1\DoAnQuanL
 D:\Tai Lieu\Kien Thuc\Hoc ky 1 nam 3\CNPMNC-LT\DoAnNhom8\Web_ban_DT_v1\DoAnQuanLyTapHoa - Copy\DoAnQuanLyTapHoa\bin\Antlr3.Runtime.pdb
 D:\Tai Lieu\Kien Thuc\Hoc ky 1 nam 3\CNPMNC-LT\DoAnNhom8\Web_ban_DT_v1\DoAnQuanLyTapHoa - Copy\DoAnQuanLyTapHoa\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\Tai Lieu\Kien Thuc\Hoc ky 1 nam 3\CNPMNC-LT\DoAnNhom8\Web_ban_DT_v1\DoAnQuanLyTapHoa - Copy\DoAnQuanLyTapHoa\obj\Debug\DoAnQuanLyTapHoa.csproj.CopyComplete
+D:\WebDT\Web_ban_DT_v1\DoAnQuanLyTapHoa - Copy\DoAnQuanLyTapHoa\obj\Debug\DoAnQuanLyTapHoa.csproj.AssemblyReference.cache
+D:\WebDT\Web_ban_DT_v1\DoAnQuanLyTapHoa - Copy\DoAnQuanLyTapHoa\obj\Debug\DoAnQuanLyTapHoa.csproj.CoreCompileInputs.cache
+D:\WebDT\Web_ban_DT_v1\DoAnQuanLyTapHoa - Copy\DoAnQuanLyTapHoa\obj\Debug\DoAnQuanLyTapHoa.dll
+D:\WebDT\Web_ban_DT_v1\DoAnQuanLyTapHoa - Copy\DoAnQuanLyTapHoa\obj\Debug\DoAnQuanLyTapHoa.pdb
